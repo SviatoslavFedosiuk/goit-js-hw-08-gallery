@@ -96,7 +96,12 @@ createItems(galleryItems);
  event.preventDefault();
   if (event.target.nodeName !== "IMG") {
     return;
-  }
+   }
+   const img = document.createElement("img");
+   img.src = event.target.src
+   img.alt = event.target.alt;
+   contentRef.innerHTML = "";
+   contentRef.append(img);
   modalRef.classList.add("is-open");
   console.log(event.target.nodeName);
  });

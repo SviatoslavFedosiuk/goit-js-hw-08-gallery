@@ -98,7 +98,7 @@ createItems(galleryItems);
     return;
    }
    const img = document.createElement("img");
-   img.src = event.target.src
+   img.src = event.target.parentNode.href;
    img.alt = event.target.alt;
    contentRef.innerHTML = "";
    contentRef.append(img);
